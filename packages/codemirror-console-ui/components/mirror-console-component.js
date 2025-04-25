@@ -100,10 +100,6 @@ function intendMirrorConsole(element, defaultsText, MirrorConsoleOptions = {}) {
         range.selectNodeContents(node.querySelector(".mirror-console-log"));
         range.deleteContents();
     });
-    node.querySelector(".mirror-console-exit").addEventListener("click", function exitConsole() {
-        mirror.destroy();
-        attachToElement(element, defaultsText, MirrorConsoleOptions);
-    });
 
     return mirror;
 }
